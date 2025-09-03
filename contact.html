@@ -103,17 +103,18 @@
     .contact-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
       background: var(--primary);
       color: #fff;
       text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.2s;
+      padding: 18px;
+      border-radius: 50%;
+      font-size: 22px;
+      transition: background 0.2s, transform 0.2s;
     }
     .contact-link:hover {
       background: var(--primary-dark);
+      transform: scale(1.1);
     }
 
     .home-link {
@@ -171,8 +172,9 @@
         We’d love to hear from you! Whether you have questions, suggestions, or feedback about Free QR Code Unlimited, feel free to reach out.
       </p>
       <div class="contact-links">
-        <a href="mailto:tauqeer.shafi0@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i> tauqeer.shafi0@gmail.com
+        <!-- Only envelope icon clickable -->
+        <a href="mailto:tauqeer.shafi0@gmail.com" class="contact-link" aria-label="Email Us">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
       <a href="https://www.free-qrcode-generator.online/" class="home-link">
@@ -182,9 +184,10 @@
 
     <footer>
       <div class="footer-links">
-        <a href="#" class="footer-link">About</a>
-        <a href="#" class="footer-link">Privacy Policy</a>
-        <a href="#" class="footer-link">Contact</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="terms.html" class="footer-link">Terms & Disclaimer</a>
       </div>
       <div class="copyright">
         © 2025 @Shipon - Free QR Code Unlimited. All rights reserved.
