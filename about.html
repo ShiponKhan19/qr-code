@@ -3,43 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Free QR Code Unlimited</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
 
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6CLBJTRJN"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V6CLBJTRJN');
+  </script>
+
+  <!-- ✅ Google AdSense verification meta -->
   <meta name="google-adsense-account" content="ca-pub-9991739573994763">
-  
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-  
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9991739573994763"
-     crossorigin="anonymous"></script>
-<!-- s01 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9991739573994763"
-     data-ad-slot="9130063092"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google AdSense (publisher: ca-pub-9991739573994763) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9991739573994763" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --gray: #9ca3af;
+      --border-color: #e5e7eb;
+      --card-bg: #ffffff;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: var(--text-primary);
+    }
+    .container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1200px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    header {
+      background: #e5e7eb;
+      color: var(--text-primary);
+      padding: 20px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-container { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .logo-icon { font-size: 32px; color: var(--primary); }
+    h1 { font-size: 28px; font-weight: 700; margin: 0; }
+    .brand-unlimited { color: var(--primary); }
+    .slogan { font-size: 16px; font-style: italic; opacity: 0.9; margin-top: 6px; }
+
+    .about-section {
+      padding: 50px 30px;
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+    }
+    .about-section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .about-section p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .home-link:hover {
+      background: var(--primary-dark);
+    }
+
+    footer {
+      padding: 30px;
+      background: var(--card-bg);
+      color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+    }
+    .footer-links { display: flex; gap: 25px; margin-bottom: 20px; }
+    .footer-link { color: var(--text-secondary); text-decoration: none; font-size: 14px; }
+    .footer-link:hover { color: var(--primary); }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Prank AI</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="funny-article.html">Funny Article</a>
-    </nav>
-  </header>
-  <main>
-    <h2>About Us</h2><p>Prank AI is a parody project made for fun and chaos.</p>
-  </main>
-  <footer>
-    <p>© 2025 Prank AI — A parody app for laughs.</p>
-  </footer>
-  <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <i class="fas fa-qrcode logo-icon"></i>
+        <h1>Free QR Code <span class="brand-unlimited">Unlimited</span></h1>
+      </div>
+      <div class="slogan">Create, Customize, and Download Professional QR Codes in Seconds</div>
+    </header>
+
+    <!-- AdSense Unit -->
+    <div class="adsense-container" style="width:100%;max-width:1200px;margin:12px auto 18px;">
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9991739573994763"
+        data-ad-slot="9130063092"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <h2>About Free QR Code Unlimited</h2>
+      <p>
+        Free QR Code Unlimited is a professional yet completely free QR code generator that lets you
+        create, customize, and download QR codes in seconds. Whether you are a business owner,
+        marketer, educator, or just someone who wants to share information quickly, our tool is
+        designed to make QR code creation effortless and reliable.
+      </p>
+      <p>
+        We focus on speed, privacy, and customization. You can choose from multiple QR types such as
+        URLs, text, emails, WiFi credentials, vCards, or social profiles, and personalize them with
+        colors, patterns, frames, and even your own logo. Everything is processed instantly in your
+        browser — no sign-ups, no tracking, and no hidden costs.
+      </p>
+      <p>
+        Our mission is to empower individuals and businesses with simple, secure, and customizable QR codes.
+        We continually improve our tool based on your feedback to ensure you get the best experience possible.
+      </p>
+      <a href="https://www.free-qrcode-generator.online/" class="home-link"><i class="fas fa-home"></i> Home</a>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#" class="footer-link">About</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+      <div class="copyright">
+        © 2025 @Shipon - Free QR Code Unlimited. All rights reserved.
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
