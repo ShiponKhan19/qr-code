@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free QR Code Unlimited - Professional QR Code Generator</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
 
-    <!-- ✅ Google Analytics -->
+    <!-- ✅ Google Analytics (unchanged) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6CLBJTRJN"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +16,7 @@
     gtag('config', 'G-V6CLBJTRJN');
     </script>
 
-    <!-- ✅ Google AdSense verification meta -->
+    <!-- ✅ Google AdSense verification meta (unchanged) -->
     <meta name="google-adsense-account" content="ca-pub-9991739573994763">
 
     <!-- Google Fonts -->
@@ -29,7 +30,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ✅ Google AdSense -->
+    <!-- ✅ Google AdSense (unchanged publisher + slot will be used below) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9991739573994763" crossorigin="anonymous"></script>
     
     <style>
@@ -78,15 +79,16 @@
             border: 1px solid var(--border-color);
         }
         
-        /* Updated Header - Left aligned */
+        /* Header (kept layout; neutral gray) */
         header {
             background: #e5e7eb;
             color: var(--text-primary);
             padding: 20px 30px;
-            text-align: left;
+            text-align: center;
             position: relative;
             display: flex;
             flex-direction: column;
+            align-items: center;
             animation: fadeDown 600ms ease both;
         }
         @keyframes fadeDown { from {opacity:0; transform: translateY(-8px);} to {opacity:1; transform: translateY(0);} }
@@ -95,8 +97,6 @@
         h1 { font-size: 28px; font-weight: 700; margin: 0; }
         .brand-unlimited { color: var(--primary); }
         .slogan { font-size: 16px; font-weight: 400; opacity: 0.9; font-style: italic; margin-top: 6px; }
-        .header-link { text-decoration: none; color: inherit; }
-        .header-link:hover { text-decoration: underline; }
 
         .main-content { display: grid; grid-template-columns: 1fr; padding: 0; }
         @media (min-width: 1100px) { .main-content { grid-template-columns: 1.2fr 0.8fr; } }
@@ -159,8 +159,7 @@
         .feature-title { font-size: 18px; font-weight: 600; margin-bottom: 15px; color: var(--text-primary); }
         .feature-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
         
-        /* Updated Footer Style */
-        footer { padding: 30px; background: #e5e7eb; color: var(--text-secondary); display: flex; flex-direction: column; align-items: center; border-top: 1px solid var(--border-color); }
+        footer { padding: 30px; background: var(--card-bg); color: var(--text-secondary); display: flex; flex-direction: column; align-items: center; border-top: 1px solid var(--border-color); }
         .footer-links { display: flex; gap: 25px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
         .footer-link { color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s; }
         .footer-link:hover { color: var(--primary); }
@@ -174,18 +173,10 @@
         .drag-drop-area:hover { border-color: var(--primary); }
         .drag-drop-area i { font-size: 24px; margin-bottom: 10px; color: var(--primary); }
         
-        /* Content Box Styles */
-        .content-box { background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; border: 1px solid var(--border-color); }
-        .content-box h3 { font-size: 18px; margin-bottom: 15px; color: var(--primary); }
-        .content-box p { margin-bottom: 15px; line-height: 1.6; color: var(--text-secondary); }
-        .content-box ul { margin-left: 20px; margin-bottom: 15px; }
-        .content-box li { margin-bottom: 8px; line-height: 1.6; }
-        .read-more { color: var(--primary); text-decoration: none; font-weight: 500; }
-        .read-more:hover { text-decoration: underline; }
-
-        .faq-item { margin-bottom: 20px; }
-        .faq-question { font-weight: 600; margin-bottom: 8px; color: var(--text-primary); }
-        .faq-answer { color: var(--text-secondary); line-height: 1.6; }
+        .frame-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; }
+        .frame-option { padding: 10px; border: 1px solid var(--border-color); border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
+        .frame-option:hover { border-color: var(--primary); }
+        .frame-option.active { border-color: var(--primary); background: rgba(37, 99, 235, 0.05); }
 
         /* Responsive tweaks */
         @media (max-width: 768px) {
@@ -200,7 +191,7 @@
             .footer-links { flex-direction: column; gap: 10px; align-items: center; }
         }
 
-        /* AdSense container */
+        /* AdSense container (kept and non-intrusive) */
         .adsense-container { width: 100%; max-width: 1200px; margin: 12px auto 18px; }
     </style>
 </head>
@@ -214,14 +205,12 @@
         <header>
             <div class="logo-container">
                 <i class="fas fa-qrcode logo-icon"></i>
-                <a href="https://www.free-qrcode-generator.online/" class="header-link">
-                    <h1>Free QR Code <span class="brand-unlimited">Unlimited</span></h1>
-                </a>
+                <h1>Free QR Code <span class="brand-unlimited">Unlimited</span></h1>
             </div>
             <div class="slogan">Create, Customize, and Download Professional QR Codes in Seconds</div>
         </header>
         
-        <!-- ✅ AdSense Unit -->
+        <!-- ✅ AdSense Unit (IDs kept exactly the same) -->
         <div class="adsense-container">
             <!-- s01 -->
             <ins class="adsbygoogle"
@@ -549,13 +538,37 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="frame-style">Frame Style</label>
+                            <select id="frame-style">
+                                <option value="none">No Frame</option>
+                                <option value="scan-me">Scan Me</option>
+                                <option value="add-me">Add Me</option>
+                                <option value="custom">Custom Text</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="watermark-text">Watermark Text (optional)</label>
                             <input type="text" id="watermark-text" placeholder="Brand name">
                             <small class="helper">Printed faintly across the QR.</small>
                         </div>
                     </div>
 
-                    <!-- Upload custom logo -->
+                    <div class="form-group" id="custom-frame-text-container" style="display:none;">
+                        <label for="custom-frame-text">Custom Frame Text</label>
+                        <input type="text" id="custom-frame-text" placeholder="Enter custom text for frame">
+                    </div>
+
+                    <!-- Upload custom frame PNG (overlay) -->
+                    <div class="form-group">
+                        <label for="frame-upload">Upload Custom Frame Image (PNG/SVG)</label>
+                        <div class="drag-drop-area" id="frame-drop-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop frame image here or click to browse</p>
+                            <input type="file" id="frame-upload" accept="image/*" style="display:none;">
+                        </div>
+                        <small class="helper">This image overlays the QR (use transparent PNG for best results).</small>
+                    </div>
+
                     <div class="form-group">
                         <label for="logo-upload">Add Logo (Drag & Drop or Click to Upload)</label>
                         <div class="drag-drop-area" id="logo-drop-area">
@@ -574,7 +587,7 @@
                     </div>
                 </div>
                 
-                <!-- More QR Types Section -->
+                <!-- More QR Types Section (kept) -->
                 <div class="section">
                     <h2 class="section-title">More QR Types</h2>
                     <div class="more-types">
@@ -655,118 +668,7 @@
             </div>
         </div>
         
-        <!-- Content Boxes Section -->
-        <div class="content-section" style="padding: 30px;">
-            <div class="content-box">
-                <h3>Basic concepts of a QR code</h3>
-                <p><strong>What is a QR code generator?</strong></p>
-                <p>A QR code generator is a tool that allows you to make your own QR codes. These codes can be customized to contain data of your choice. People can scan these codes on their smartphones and they'll be automatically sent to the content you point them to, whether it's a website, a video or a social media profile.</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-
-            <div class="content-box">
-                <h3>How do I download my QR code?</h3>
-                <p>You can download your QR codes at any time by logging into your account and exporting them from there. They're available in a variety of different formats including PNG, JPG, SVG and EPS. When you download them, they'll be saved in the highest resolution available.</p>
-            </div>
-
-            <div class="content-box">
-                <h3>Can anyone create a QR code?</h3>
-                <p>Yes! Our tool is designed so that anyone can create a high-performing QR code with no design experience required. All it takes is a few clicks. You'll select the options you want to use and tell us what you want your QR code to do, and our QR code generator will do the rest of the work! Simply save your QR code and start using it on your packaging, your print materials or anywhere else that you want to deploy it.</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-
-            <div class="content-box">
-                <h3>Why are there other websites offering QR code generators for free?</h3>
-                <p>There are some free QR generators out there, but they only have limited options available and they'll often overlay their own branding on top of it. If you want access to advanced customization and analytics, you'll need a paid tool like the one we offer. With Online QR Generator, you can link your code to nearly any digital content, track results, and fully customize the code. Our dynamic QR codes let you edit the content of your QR code at any time, even if it's already printed! Try it for free with our trial period.</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-
-            <div class="content-box">
-                <h3>Can I use the QR codes generated in the trial period for commercial purposes?</h3>
-                <p>Of course! Our trial gives you access to everything a paid plan has to offer. So why not take full advantage of it and use it for your business?</p>
-            </div>
-
-            <div class="content-box">
-                <h3>What kind of information can be stored in a QR code?</h3>
-                <p>QR codes can store nearly any type of digital information, including PDF files, websites, app stores, videos, and even Wi-Fi networks. With a simple scan, the possibilities of redirection are virtually limitless.</p>
-            </div>
-
-            <div class="content-box">
-                <h3>How long do I have to wait for my QR code?</h3>
-                <p>We know how busy everyone is in today's day and age, so we're not going to leave you hanging. You'll be able to download your QR codes as soon as your QR code is created. You can start sharing them right away.</p>
-            </div>
-
-            <div class="content-box">
-                <h3>What's the difference between static and dynamic QR codes?</h3>
-                <p>Static QR codes are the simplest kind of QR codes and they can't be modified or overwritten at any point in the future. In other words, once you have generated a static QR code, that's it - it cannot be edited. Dynamic QR codes are editable at any time. You can create a dynamic QR code, print the code, distribute it, and change the link that it points to at a later date. Also, dynamic QR codes can collect time, location, and frequency statistics.</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-
-            <div class="content-box">
-                <h3>Can I manage the codes with the QR code generator?</h3>
-                <p>Absolutely! Once you have signed up for one of our plans, you can easily manage your QR codes. Our easy QR code generator allows you to create, design, save, delete, and modify your codes with ease. You can add logos, frames, colors, edit URLs, and much more. The possibilities are endless, giving you complete control over your QR codes.</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-
-            <div class="content-box">
-                <h3>Design and creation of QR codes</h3>
-                <p><strong>Can I edit my QR codes?</strong></p>
-                <p><strong>Can I customize my QR codes or use different colors?</strong></p>
-                <p><strong>Is there a limit to how many QR codes I can create?</strong></p>
-                <p><strong>Is it possible to include my company's logo in a QR code?</strong></p>
-                <p><strong>Can I edit my QR codes?</strong></p>
-                <p>Yes, dynamic codes can be edited at any time, allowing you to update the destination that they point to. By clicking on the "Edit" button of a QR code from your dashboard, you will be able to update its content, even if it's already printed. You can also edit the look and feel of your QR codes by customizing the design and colors that they use.</p>
-            </div>
-
-            <div class="content-box">
-                <h3>What Are QR Codes and How Do They Work?</h3>
-                <p>QR codes (Quick Response codes) are two-dimensional barcodes that can store various types of information. Originally developed for the automotive industry in Japan, they've become widely popular for marketing, payments, and information sharing.</p>
-                <p>When you scan a QR code with your smartphone camera, the encoded information is instantly decoded and acted upon. This could be opening a website, connecting to WiFi, saving contact information, or many other actions.</p>
-            </div>
-
-            <div class="content-box">
-                <h3>Why Use Our QR Code Generator?</h3>
-                <p>Our free QR code generator offers several advantages over other solutions:</p>
-                <ul>
-                    <li><strong>No registration required</strong> - Start creating immediately without signing up</li>
-                    <li><strong>Complete privacy</strong> - All processing happens in your browser</li>
-                    <li><strong>Multiple content types</strong> - Generate QR codes for URLs, text, contacts, WiFi and more</li>
-                    <li><strong>Customization options</strong> - Adjust colors and size to match your needs</li>
-                    <li><strong>High-quality downloads</strong> - Get your QR codes in multiple formats</li>
-                </ul>
-            </div>
-
-            <div class="content-box">
-                <h3>Frequently Asked Questions</h3>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Is this QR code generator really free?</div>
-                    <div class="faq-answer">Yes, our QR code generator is completely free to use with no hidden fees or limitations. You can create as many QR codes as you need without any cost.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Do I need to create an account?</div>
-                    <div class="faq-answer">No, we don't require any registration or account creation. Your QR codes are generated directly in your browser without sending your data to our servers.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What types of QR codes can I create?</div>
-                    <div class="faq-answer">Our generator supports URLs, plain text, WiFi network credentials, vCards (contact information), email messages, and SMS messages.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Can I customize the appearance of my QR code?</div>
-                    <div class="faq-answer">Yes, you can customize the foreground and background colors, adjust the margin size, and choose from different output sizes to fit your needs.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What file formats are available for download?</div>
-                    <div class="faq-answer">You can download your QR codes in PNG, JPEG, WEBP, and SVG formats to suit different use cases.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Section -->
+        <!-- Features Section (kept) -->
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">
@@ -793,8 +695,7 @@
             </div>
         </div>
         
-        <!-- Updated Footer with different background color -->
-        <footer style="background-color: #e5e7eb;">
+        <footer>
             <div class="footer-links">
                 <a href="index.html" class="footer-link">Home</a>
                 <a href="about.html" class="footer-link">About</a>
@@ -809,8 +710,6 @@
     </div>
 
     <script>
-        // The JavaScript code remains exactly the same as in the original
-        // Only the HTML and CSS have been modified as requested
         document.addEventListener('DOMContentLoaded', function() {
             // DOM Elements
             const qrTypes = document.querySelectorAll('.qr-type');
@@ -819,6 +718,8 @@
             const qrCodeDiv = document.getElementById('qrcode');
             const qrFrame = document.getElementById('qr-frame');
             const themeToggle = document.getElementById('theme-toggle');
+
+            // Ads already initialized above
 
             // Design controls
             const frameStyle = document.getElementById('frame-style');
@@ -837,11 +738,14 @@
             const cornerColor = document.getElementById('corner-color');
             const watermarkText = document.getElementById('watermark-text');
 
-            // Logo upload
+            // Logo + Frame uploads
             const logoDropArea = document.getElementById('logo-drop-area');
             const logoUpload = document.getElementById('logo-upload');
             const logoRemoveBtn = document.getElementById('logo-remove');
             const logoSizeInput = document.getElementById('logo-size');
+
+            const frameDropArea = document.getElementById('frame-drop-area');
+            const frameUpload = document.getElementById('frame-upload');
 
             // Share buttons
             const shareBtn = document.getElementById('share-btn');
@@ -857,6 +761,7 @@
             let currentQRData = '';
             let debounceTimer;
             let logoImage = null; // DataURL
+            let frameImage = null; // DataURL
             let lastPreviewCanvas = null;
 
             // Clear default URL on focus
@@ -957,6 +862,9 @@
             logoRemoveBtn.addEventListener('click', () => { logoImage = null; generateQRCode(); });
             logoSizeInput.addEventListener('input', () => generateQRCode());
 
+            // Setup frame overlay upload
+            setupDropArea(frameDropArea, frameUpload, (dataURL) => { frameImage = dataURL; generateQRCode(); });
+
             // Live preview on all inputs
             const allInputs = document.querySelectorAll('input, textarea, select');
             allInputs.forEach(input => {
@@ -964,9 +872,9 @@
                 input.addEventListener('change', generateQRCode);
             });
 
-            // ======= Styled QR rendering =======
+            // ======= Styled QR rendering (PROMISE-BASED to ensure logo drawn before download) =======
             function renderStyledQRCodeToCanvas(canvas, data, size, opts) {
-                const { dark, light, shape, cornerStyle, cornerColor, logo, logoPct, gradient, watermark } = opts;
+                const { dark, light, shape, cornerStyle, cornerColor, logo, logoPct, gradient, watermark, frameOverlay } = opts;
                 return new Promise((resolve) => {
                     const ctx = canvas.getContext('2d');
                     const MARGIN_MODULES = 2; // quiet zone (modules)
@@ -1122,24 +1030,43 @@
                         ctx.restore();
                     }
 
-                    // Draw logo
-                    if (logo) {
-                        const img = new Image();
-                        img.onload = function(){
-                            const qrArea = qrDrawSize;
-                            const size = Math.floor(qrArea * (logoPct/100));
-                            const lx = Math.floor((qrArea - size)/2);
-                            const ly = Math.floor((qrArea - size)/2);
-                            // padding under logo for contrast
-                            ctx.fillStyle = light;
-                            roundRect(ctx, lx-10, ly-10, size+20, size+20, 10); ctx.fill();
-                            ctx.drawImage(img, lx, ly, size, size);
-                            resolve();
-                        };
-                        img.src = logo;
-                    } else {
-                        resolve();
+                    // Draw logo (async)
+                    function drawLogoThenFrame(){
+                        if (logo) {
+                            const img = new Image();
+                            img.onload = function(){
+                                const qrArea = qrDrawSize;
+                                const size = Math.floor(qrArea * (logoPct/100));
+                                const lx = Math.floor((qrArea - size)/2);
+                                const ly = Math.floor((qrArea - size)/2);
+                                // padding under logo for contrast
+                                ctx.fillStyle = light;
+                                roundRect(ctx, lx-10, ly-10, size+20, size+20, 10); ctx.fill();
+                                ctx.drawImage(img, lx, ly, size, size);
+                                drawFrameOverlay();
+                            };
+                            img.src = logo;
+                        } else {
+                            drawFrameOverlay();
+                        }
                     }
+
+                    // Draw frame overlay (async)
+                    function drawFrameOverlay(){
+                        if (frameOverlay) {
+                            const fimg = new Image();
+                            fimg.onload = function(){
+                                // Cover full canvas; frame image should be same aspect
+                                ctx.drawImage(fimg, 0, 0, canvas.width, canvas.height);
+                                resolve();
+                            };
+                            fimg.src = frameOverlay;
+                        } else {
+                            resolve();
+                        }
+                    }
+
+                    drawLogoThenFrame();
 
                     function roundRect(ctx, x, y, w, h, r) {
                         if (r<=0){ ctx.beginPath(); ctx.rect(x,y,w,h); ctx.closePath(); return; }
@@ -1350,7 +1277,8 @@ END:VCALENDAR`;
                     logo: logoImage,
                     logoPct: parseInt(logoSizeInput.value, 10) || 25,
                     gradient: grad,
-                    watermark: watermarkText.value || ''
+                    watermark: watermarkText.value || '',
+                    frameOverlay: frameImage
                 });
 
                 // Scale to preview size 260x260
@@ -1392,7 +1320,8 @@ END:VCALENDAR`;
                                 c2: qrColor2.value,
                                 angle: parseFloat(gradientAngle.value)
                             },
-                            watermark: watermarkText.value || ''
+                            watermark: watermarkText.value || '',
+                            frameOverlay: frameImage
                         });
                         const pctx2 = previewCanvas.getContext('2d');
                         pctx2.clearRect(0,0,PREVIEW,PREVIEW);
@@ -1453,8 +1382,10 @@ END:VCALENDAR`;
                         c1: qrColor.value,
                         c2: qrColor2.value,
                         angle: parseFloat(gradientAngle.value || 45)
+                    <!-- Add this right after the incomplete line in the script section -->
                     },
-                    watermark: watermarkText.value || ''
+                    watermark: watermarkText.value || '',
+                    frameOverlay: frameImage
                 });
 
                 // Draw the QR code on the main canvas
@@ -1527,7 +1458,8 @@ END:VCALENDAR`;
                         c2: qrColor2.value,
                         angle: parseFloat(gradientAngle.value || 45)
                     },
-                    watermark: watermarkText.value || ''
+                    watermark: watermarkText.value || '',
+                    frameOverlay: frameImage
                 });
                 
                 ctx.drawImage(qrCanvas, 0, 0, size, size);
@@ -1578,7 +1510,8 @@ END:VCALENDAR`;
                                 c2: qrColor2.value,
                                 angle: parseFloat(gradientAngle.value || 45)
                             },
-                            watermark: watermarkText.value || ''
+                            watermark: watermarkText.value || '',
+                            frameOverlay: frameImage
                         });
                         
                         const blob = await new Promise(resolve => qrCanvas.toBlob(resolve, 'image/png'));
