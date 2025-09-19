@@ -546,6 +546,17 @@
                         <input type="text" id="custom-frame-text" placeholder="Enter custom text for frame">
                     </div>
 
+                    <!-- Upload custom frame PNG (overlay) -->
+                    <div class="form-group">
+                        <label for="frame-upload">Upload Custom Frame Image (PNG/SVG)</label>
+                        <div class="drag-drop-area" id="frame-drop-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop frame image here or click to browse</p>
+                            <input type="file" id="frame-upload" accept="image/*" style="display:none;">
+                        </div>
+                        <small class="helper">This image overlays the QR (use transparent PNG for best results).</small>
+                    </div>
+
                     <div class="form-group">
                         <label for="logo-upload">Add Logo (Drag & Drop or Click to Upload)</label>
                         <div class="drag-drop-area" id="logo-drop-area">
